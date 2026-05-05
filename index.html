@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Öz Yapı Market - Kaliteli boya, hırdavat ve yapı malzemeleri. Bilgisayarlı renk karışım makinesi ile istediğiniz renk boya anında hazırlanır. Filli Boya, Fawori ve daha fazlası.
+    Has Eleman: Selim Pan Azgın">
+    <meta name="keywords" content="Öz Yapı Market, boya, hırdavat, yapı malzemeleri, Filli Boya, Fawori, boya makinesi, renk kataloğu, nalbur">
+    <title>Öz Yapı Market | Profesyonel Boya ve Hırdavat Çözümleri</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #1e3a8a; /* Deep Blue */
+            --secondary-color: #3b82f6; /* Bright Blue */
+            --accent-color: #f59e0b; /* Orange/Yellow for CTA */
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f3f4f6;
+            --bg-white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .bg-gray {
+            background-color: var(--bg-light);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--bg-white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--bg-white);
+            color: var(--bg-white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--bg-white);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: var(--transition);
+            padding: 20px 0;
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(31, 41, 55, 0.8)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80') center/cover no-repeat fixed;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--bg-white);
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #d1d5db;
+            animation: fadeInUp 1s ease 0.3s;
+            animation-fill-mode: both;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.6s;
+            animation-fill-mode: both;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        /* Services & Products Cards Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--bg-white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border: 1px solid #e5e7eb;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: var(--secondary-color);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            color: var(--text-light);
+        }
+
+        /* Products Specific */
+        .product-card {
+            padding: 0;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 25px;
+            background: var(--bg-white);
+            position: relative;
+        }
+
+        /* Color Selection System */
+        .color-system {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .color-header {
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .color-header p {
+            color: var(--text-light);
+        }
+
+        .interactive-palette {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+        }
+
+        .color-swatch {
+            width: 100%;
+            padding-bottom: 100%; /* Square aspect ratio */
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .color-swatch.selected {
+            border: 3px solid var(--text-dark);
+            transform: scale(1.1);
+            z-index: 20;
+        }
+
+        .color-display {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .selected-color-box {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #f8fafc;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: background-color 0.4s ease;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Brands */
+        .brands-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .brand-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-logo:hover {
+            color: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: var(--bg-light);
+        }
+
+        .stars {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .contact-list {
+            margin-bottom: 30px;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-list i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        .footer-col p {
+            color: #9ca3af;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .about-content, .contact-wrapper {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+            }
+            .interactive-palette {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--bg-white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-paint-roller"></i> Öz Yapı Market
+            </a>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">Ana Sayfa</a></li>
+                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#services">Hizmetler</a></li>
+                <li><a href="#products">Ürünler</a></li>
+                <li><a href="#color-machine">Renk Makinesi</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">Evinizin Yeni Rengi, Yapılarınızın Güvencesi</h1>
+            <p class="hero-subtitle">Boya, hırdavat ve yapı malzemelerinde yılların tecrübesiyle, kaliteli markaları ve bilgisayarlı anında renk karışım teknolojisini sizlerle buluşturuyoruz.</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn btn-primary">Hizmetlerimizi İncele</a>
+                <a href="#contact" class="btn btn-outline">Bize Ulaşın</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="reveal">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80" alt="Öz Yapı Market Mağaza İçi">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left;">Hakkımızda</h2>
+                    <p><strong>Öz Yapı Market</strong> olarak, uzun yıllardır yapı, dekorasyon ve hırdavat sektöründe güvenilir hizmet sunmaktayız. Amacımız, müşterilerimizin ev yenileme ve inşaat süreçlerinde ihtiyaç duydukları en kaliteli malzemelere en uygun fiyatlarla ulaşmalarını sağlamaktır.</p>
+                    <p>Uzman ekibimiz, boya seçiminden teknik hırdavat ihtiyaçlarınıza kadar her adımda size danışmanlık yapmak için burada. Müşteri memnuniyeti ve güven, işimizin temel taşıdır.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-medal"></i></div>
+                            <div>
+                                <h4>Kaliteli Ürün</h4>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">En iyi markalar</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                            <div>
+                                <h4>Hızlı Teslimat</h4>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Aynı gün sevkiyat</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+                            <div>
+                                <h4>Güvenilirlik</h4>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Yüzde yüz müşteri memnuniyeti</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
+                            <div>
+                                <h4>Uygun Fiyat</h4>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Toptan ve perakende</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-gray reveal">
+        <div class="container">
+            <h2 class="section-title">Hizmetlerimiz</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-fill-drip"></i></div>
+                    <h3>Bilgisayarlı Renk Karışımı</h3>
+                    <p>İstediğiniz rengi katalogdan seçin, hassas boya makinelerimiz ile dakikalar içinde hazırlayalım.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3>Profesyonel Danışmanlık</h3>
+                    <p>Yüzey tipine ve ihtiyacınıza en uygun boya, astar ve hırdavat seçimi için ücretsiz teknik destek.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <h3>Toptan & Perakende Satış</h3>
+                    <p>Bireysel ev yenilemelerinden büyük inşaat projelerine kadar her ölçekte malzeme tedariği.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="reveal">
+        <div class="container">
+            <h2 class="section-title">Ürün Kategorilerimiz</h2>
+            <div class="grid-container">
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="İç ve Dış Cephe Boyaları" class="product-img">
+                    <div class="product-info">
+                        <h3>İç ve Dış Cephe Boyaları</h3>
+                        <p>Plastik, silikonlu, yağlı boyalar ve dış cephe kaplamaları.</p>
+                    </div>
+                </div>
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1581166397057-235af2b3c6dd?auto=format&fit=crop&w=600&q=80" alt="Boya Malzemeleri" class="product-img">
+                    <div class="product-info">
+                        <h3>Boya Malzemeleri</h3>
+                        <p>Rulolar, fırçalar, maskeleme bantları, hışır örtüler ve spatulalar.</p>
+                    </div>
+                </div>
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=600&q=80" alt="Hırdavat ve El Aletleri" class="product-img">
+                    <div class="product-info">
+                        <h3>Hırdavat & El Aletleri</h3>
+                        <p>Matkaplar, vidalar, çiviler, tornavida setleri ve izolasyon malzemeleri.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="color-machine" class="bg-gray reveal">
+        <div class="container">
+            <h2 class="section-title">Siz Hayal Edin, Biz Karalım</h2>
+            
+            <div class="color-system">
+                <div class="color-header">
+                    <h3>Makineli Renk Seçim Sistemi</h3>
+                    <p>Yüzlerce renk seçeneği arasından zevkinize uygun olanı seçin. Renk kodunu makinemize giriyoruz, sıfır hata ile boyanızı saniyeler içinde karıştırıp teslim ediyoruz.</p>
+                </div>
+                
+                <div class="interactive-palette">
+                    <div class="palette-grid" id="palette">
+                        <div class="color-swatch" style="background-color: #f8fafc;" data-name="Buz Beyazı" data-hex="#f8fafc"></div>
+                        <div class="color-swatch" style="background-color: #f1f5f9;" data-name="Kırık Beyaz" data-hex="#f1f5f9"></div>
+                        <div class="color-swatch" style="background-color: #e2e8f0;" data-name="Açık Gri" data-hex="#e2e8f0"></div>
+                        <div class="color-swatch" style="background-color: #94a3b8;" data-name="Gümüş Gri" data-hex="#94a3b8"></div>
+                        
+                        <div class="color-swatch" style="background-color: #dbeafe;" data-name="Buz Mavisi" data-hex="#dbeafe"></div>
+                        <div class="color-swatch" style="background-color: #93c5fd;" data-name="Gök Mavisi" data-hex="#93c5fd"></div>
+                        <div class="color-swatch" style="background-color: #3b82f6;" data-name="Okyanus" data-hex="#3b82f6"></div>
+                        <div class="color-swatch" style="background-color: #1e3a8a;" data-name="Lacivert" data-hex="#1e3a8a"></div>
+                        
+                        <div class="color-swatch" style="background-color: #fce7f3;" data-name="Pudra Pembe" data-hex="#fce7f3"></div>
+                        <div class="color-swatch" style="background-color: #fca5a5;" data-name="Somon" data-hex="#fca5a5"></div>
+                        <div class="color-swatch" style="background-color: #ef4444;" data-name="Kiremit" data-hex="#ef4444"></div>
+                        <div class="color-swatch" style="background-color: #991b1b;" data-name="Bordo" data-hex="#991b1b"></div>
+                        
+                        <div class="color-swatch" style="background-color: #fef3c7;" data-name="Krem" data-hex="#fef3c7"></div>
+                        <div class="color-swatch" style="background-color: #fde047;" data-name="Güneş Sarısı" data-hex="#fde047"></div>
+                        <div class="color-swatch" style="background-color: #d97706;" data-name="Hardal" data-hex="#d97706"></div>
+                        <div class="color-swatch" style="background-color: #451a03;" data-name="Kahve" data-hex="#451a03"></div>
+                    </div>
+
+                    <div class="color-display">
+                        <div class="selected-color-box" id="selected-color-box"></div>
+                        <h3 id="selected-color-name">Buz Beyazı</h3>
+                        <p id="selected-color-hex" style="color: var(--text-light); margin-bottom: 15px;">#f8fafc</p>
+                        <a href="#contact" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Bu Rengi Sipariş Ver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="brands" class="reveal">
+        <div class="container">
+            <h2 class="section-title">Çalıştığımız Markalar</h2>
+            <div class="brands-container">
+                <div class="brand-logo"><i class="fa-solid fa-droplet"></i> FİLLİ BOYA</div>
+                <div class="brand-logo"><i class="fa-solid fa-star"></i> FAWORİ</div>
+                <div class="brand-logo"><i class="fa-solid fa-shield-halved"></i> POLİSAN</div>
+                <div class="brand-logo"><i class="fa-solid fa-leaf"></i> MARSHALL</div>
+                <div class="brand-logo"><i class="fa-solid fa-brush"></i> DYO</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="bg-gray reveal">
+        <div class="container">
+            <h2 class="section-title">Müşterilerimiz Ne Diyor?</h2>
+            <div class="grid-container">
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Evin tamamını boyamak için gittim, renk makinesinde tam eşimle istediğimiz tonu buldular. Hizmetleri ve ilgileri çok güzeldi."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">A</div>
+                        <div>
+                            <h4>Ahmet Yılmaz</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-light);">Ev Sahibi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Boya ustasıyım, malzememi sürekli Öz Yapı Market'ten alıyorum. Hem fiyatlar uygun hem de hırdavat çeşitleri tam. Güvenilir esnaf."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">M</div>
+                        <div>
+                            <h4>Mustafa Usta</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-light);">Boya ve Dekorasyon Ustası</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="reveal">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Bize Ulaşın</h3>
+                    <p style="margin-bottom: 20px; color: var(--text-light);">Boya fiyatları, toptan alım veya ürün stoğu hakkında bilgi almak için bizimle iletişime geçebilirsiniz.</p>
+                    
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Adres:</strong><br>
+                                Örnek Mahallesi, Yapı Caddesi No:123<br>
+                                Merkez / Türkiye
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Telefon:</strong><br>
+                                <a href="tel:+905555555555">+90 (555) 555 55 55</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>E-posta:</strong><br>
+                                <a href="mailto:info@ozyapimarket.com">info@ozyapimarket.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <strong>Çalışma Saatleri:</strong><br>
+                                Pazartesi - Cumartesi: 08:00 - 19:30<br>
+                                Pazar: Kapalı
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/905555555555" target="_blank" class="btn btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp'tan Yazın
+                    </a>
+                </div>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.1557999818854!2d28.9760!3d41.0082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAwJzI5LjUiTiAyOMKwNTgnMzMuNiJF!5e0!3m2!1str!2str!4v1620000000000!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="color: white; margin-bottom: 20px;">
+                        <i class="fa-solid fa-paint-roller" style="color: var(--secondary-color);"></i> Öz Yapı Market
+                    </a>
+                    <p>Evinizi yenilerken güvenebileceğiniz tek adres. Kaliteli boya, geniş hırdavat seçenekleri ve bilgisayarlı renk makineleriyle hizmetinizdeyiz.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Hızlı Linkler</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Ana Sayfa</a></li>
+                        <li><a href="#about">Hakkımızda</a></li>
+                        <li><a href="#products">Ürünlerimiz</a></li>
+                        <li><a href="#color-machine">Renk Seçimi</a></li>
+                        <li><a href="#contact">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Markalarımız</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Filli Boya</a></li>
+                        <li><a href="#">Fawori</a></li>
+                        <li><a href="#">Polisan</a></li>
+                        <li><a href="#">Marshall</a></li>
+                        <li><a href="#">Dyo</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Öz Yapı Market. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/905555555555" class="whatsapp-btn" target="_blank" aria-label="WhatsApp İletişim">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if(navLinks.classList.contains('active')){
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu on link click
+        navLinksItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-xmark');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Sticky Navbar & Active Menu Link
+        const navbar = document.getElementById('navbar');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            // Navbar shadow and padding shrink
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Active menu highlighting
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinksItems.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll Reveal Animations
+        const reveals = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 150;
+
+            reveals.forEach(reveal => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        // Trigger once on load
+        revealOnScroll();
+
+        // Color Palette Interactive UI
+        const swatches = document.querySelectorAll('.color-swatch');
+        const displayBox = document.getElementById('selected-color-box');
+        const displayName = document.getElementById('selected-color-name');
+        const displayHex = document.getElementById('selected-color-hex');
+
+        // Set initial selected state
+        swatches[0].classList.add('selected');
+
+        swatches.forEach(swatch => {
+            swatch.addEventListener('click', () => {
+                // Remove selected class from all
+                swatches.forEach(s => s.classList.remove('selected'));
+                // Add to clicked
+                swatch.classList.add('selected');
+                
+                // Get data
+                const hexColor = swatch.getAttribute('data-hex');
+                const colorName = swatch.getAttribute('data-name');
+                
+                // Update display
+                displayBox.style.backgroundColor = hexColor;
+                displayName.textContent = colorName;
+                displayHex.textContent = hexColor;
+                
+                // Change display text color based on lightness (simple heuristic for UI)
+                const isDark = ['#1e3a8a', '#991b1b', '#451a03', '#3b82f6', '#ef4444', '#d97706'].includes(hexColor);
+                if(isDark) {
+                    displayBox.style.border = "5px solid #e5e7eb";
+                } else {
+                    displayBox.style.border = "5px solid white";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
